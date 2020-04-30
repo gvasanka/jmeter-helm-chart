@@ -22,3 +22,19 @@ image:
   ## The tag for the image
   ## ref: https://hub.docker.com/r/pedrocesarti/jmeter-docker/tags/
   tag: 3.3
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 200m
+    memory: 128Mi
+
+jmeter:
+  xms:
+    memory: 100m
+    #  Xms<size>        set initial Java heap size
+  xmx:
+    memory: 100m
+    #  Xmx<size>        set maximum Java heap size

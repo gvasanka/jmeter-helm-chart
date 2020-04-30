@@ -3,9 +3,9 @@ entries:
   app1:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-04-30T11:15:52.242796+05:30"
+    created: "2020-04-30T12:02:47.68092+05:30"
     description: A Helm chart for Kubernetes
-    digest: 0cd052f7546933a51812a3d7e332c4c7b043f77b572f9644651e951a8d75fd89
+    digest: 7ef9fd07bb69b85f205c19a9e413806a6a659de432badf5397fcbff7b842bb36
     name: app1
     urls:
     - https://gvasanka.github.io/jmeter-helm-chart/app1-0.1.0.tgz
@@ -13,11 +13,11 @@ entries:
   jmeter-slave:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-04-30T11:15:52.243445+05:30"
+    created: "2020-04-30T12:02:47.681222+05:30"
     description: A Helm chart for JMeter Slave creation
-    digest: dd5d6a78829966717900d45838e42548919fcb195b6ad4183bdb4efd4da119c5
+    digest: b36d0d2cf33dc03f5cd0374ce0d5a6d5a5744ce16d2bdaf93de7339f69535d37
     name: jmeter-slave
     urls:
     - https://gvasanka.github.io/jmeter-helm-chart/jmeter-slave-0.1.0.tgz
     version: 0.1.0
-generated: "2020-04-30T11:15:52.241314+05:30"
+generated: "2020-04-30T12:02:47.679532+05:30"
