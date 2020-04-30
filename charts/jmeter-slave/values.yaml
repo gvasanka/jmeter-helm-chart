@@ -9,10 +9,10 @@ pod:
 resources:
     limits:
       cpu: 200m
-      memory: 700Mi
+      memory: 1224Mi
     requests:
       cpu: 100m
-      memory: 1224Mi
+      memory: 700Mi
 
 # POD image configuration
 image:
