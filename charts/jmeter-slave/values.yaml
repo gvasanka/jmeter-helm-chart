@@ -1,40 +1,30 @@
-# Default values for distributed-jmeter.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
+# JMete slave pod deployment default values
 
-master:
-  ## The number of pods in the master deployment
+# POD related configuration
+pod:
+  # The number of JMete slave pods required
   replicaCount: 1
 
-server:
-  ## The number of pods in the server deployment
-  replicaCount: 1
+# POD resource configuration
+resources:
+    limits:
+      cpu: 200m
+      memory: 700Mi
+    requests:
+      cpu: 100m
+      memory: 1224Mi
 
+# POD image configuration
 image:
-  ## Specify an imagePullPolicy
-  ## ref: http://kubernetes.io/docs/user-guide/images/#pre-pulling-images
+  repository: "gvasanka/jmeter-plugins-slave"
+  tag: 5.1.1
   pullPolicy: IfNotPresent
 
-  ## The repository and image
-  ## ref: https://hub.docker.com/r/pedrocesarti/jmeter-docker/
-  repository: "pedrocesarti/jmeter-docker"
-
-  ## The tag for the image
-  ## ref: https://hub.docker.com/r/pedrocesarti/jmeter-docker/tags/
-  tag: 3.3
-
-resources:
-  requests:
-    cpu: 100m
-    memory: 128Mi
-  limits:
-    cpu: 200m
-    memory: 128Mi
-
+# JMeter JVM memory configuration
 jmeter:
   xms:
-    memory: 100m
     #  Xms<size>        set initial Java heap size
+    memory: 512M
   xmx:
-    memory: 100m
     #  Xmx<size>        set maximum Java heap size
+    memory: 1024M
