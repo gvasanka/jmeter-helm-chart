@@ -26,12 +26,12 @@ spec:
     spec:
     {{- if .Values.imagePullSecrets }}
       imagePullSecrets:
-    {{ toYaml .Values.imagePullSecrets | indent 8 }}
+        - name: {{ .Values.imagePullSecretName }}
     {{- end }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          imagePullPolicy: "{{ .Values.image.pullPolicy }}"
           resources:
             limits:
               memory: "{{ .Values.resources.limits.memory}}"
