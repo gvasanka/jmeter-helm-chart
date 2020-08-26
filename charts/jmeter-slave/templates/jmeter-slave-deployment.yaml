@@ -24,6 +24,10 @@ spec:
         app.kubernetes.io/instance: {{ .Release.Name }}
         app.kubernetes.io/component: jmeter-slave
     spec:
+    {{- if .Values.imagePullSecrets }}
+      imagePullSecrets:
+    {{ toYaml .Values.imagePullSecrets | indent 8 }}
+    {{- end }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
